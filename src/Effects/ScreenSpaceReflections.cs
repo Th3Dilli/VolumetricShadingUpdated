@@ -171,6 +171,8 @@ namespace VolumetricShading.Effects
 
             for (var i = 0; i < _shaders.Length; ++i)
             {
+                if (_shaders[i] == null) continue;
+
                 _shaders[i]?.Dispose();
                 _shaders[i] = null;
             }
