@@ -3,7 +3,7 @@ VolumetricShading
 
 Disclaimer
 ----------
-This version is a fork of the original mod made by @xxmicloxx, available [here](https://github.com/xxmicloxx/VolumetricShading).
+This version is a fork of the original mod made by [xxmicloxx](https://github.com/xxmicloxx), available [here](https://github.com/xxmicloxx/VolumetricShading).
 
 Overview
 --------
