@@ -1,6 +1,10 @@
 VolumetricShading
 =================
 
+Disclaimer
+----------
+This version is a fork of the original mod made by @xxmicloxx, available [here](https://github.com/xxmicloxx/VolumetricShading).
+
 Overview
 --------
 Adds volumetric lighting, screen space reflections and other nice things to Vintage Story.
