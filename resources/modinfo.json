@@ -1,0 +1,12 @@
+{
+    "type": "code",
+    "modid": "volumetricshadingupdated",
+    "name": "Volumetric Shading (Updated)",
+    "authors": [ "xxmicloxx", "Novocain", "krami", "Th3Dilli" ],
+    "description": "Adds multiple shader changes to the game. (Unofficial Continuation)",
+    "version": "0.7.1",
+    "side":  "Client",
+    "dependency": {
+        "game": ""
+    }
+}
