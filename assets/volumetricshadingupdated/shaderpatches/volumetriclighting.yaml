@@ -134,10 +134,10 @@
 
 - type: token
   filename: chunktransparent.fsh
-  tokens: outGlow = vec4(glowLevel, 0, 0, color.a);
+  tokens: outGlow = vec4(glowLevel + glow, 0, 0, color.a);
   content: |
     float scatterAmt = calculateVolumetricScatter(worldPos.xyz);
-    outGlow = vec4(glowLevel, scatterAmt, 0, color.a);
+    outGlow = vec4(glowLevel + glow, scatterAmt, 0, color.a);
 
 - type: start
   filename: chunktransparent.vsh
