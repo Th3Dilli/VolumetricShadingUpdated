@@ -129,8 +129,8 @@ namespace VolumetricShading.Effects
 
             var fbPrimary = mainBuffers[(int) EnumFrameBuffer.Primary];
             
-            var fbWidth = (int) (_platform.window.Width * ClientSettings.SSAA);
-            var fbHeight = (int) (_platform.window.Height * ClientSettings.SSAA);
+            var fbWidth = (int) (_platform.window.Bounds.Size.X * ClientSettings.SSAA);
+            var fbHeight = (int) (_platform.window.Bounds.Size.Y * ClientSettings.SSAA);
             if (fbWidth == 0 || fbHeight == 0)
                 return;
 

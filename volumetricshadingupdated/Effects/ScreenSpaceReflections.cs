@@ -171,8 +171,6 @@ namespace VolumetricShading.Effects
 
             for (var i = 0; i < _shaders.Length; ++i)
             {
-                if (_shaders[i] == null) continue;
-
                 _shaders[i]?.Dispose();
                 _shaders[i] = null;
             }
@@ -207,8 +205,8 @@ namespace VolumetricShading.Effects
             }
 
             // create new framebuffer
-            _fbWidth = (int) (_platform.window.Width * ClientSettings.SSAA);
-            _fbHeight = (int) (_platform.window.Height * ClientSettings.SSAA);
+            _fbWidth = (int) (_platform.window.Bounds.Size.X * ClientSettings.SSAA);
+            _fbHeight = (int) (_platform.window.Bounds.Size.Y * ClientSettings.SSAA);
             if (_fbWidth == 0 || _fbHeight == 0)
                 return;
             

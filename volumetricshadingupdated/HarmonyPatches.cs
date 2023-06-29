@@ -14,13 +14,13 @@ namespace VolumetricShading
     internal class PlatformPatches
     {
         private static readonly MethodInfo PlayerViewVectorSetter =
-            typeof(ShaderProgramGodrays).GetProperty("PlayerViewVector")?.SetMethod;
+            typeof(ShaderProgramGodrays).GetProperty("PlayerViewVector")?.GetSetMethod();
 
         private static readonly MethodInfo GodrayCallsiteMethod = typeof(PlatformPatches).GetMethod("GodrayCallsite");
 
 
         private static readonly MethodInfo PrimaryScene2DSetter =
-            typeof(ShaderProgramFinal).GetProperty("PrimaryScene2D")?.SetMethod;
+            typeof(ShaderProgramFinal).GetProperty("PrimaryScene2D")?.GetSetMethod();
 
         private static readonly MethodInfo FinalCallsiteMethod = typeof(PlatformPatches).GetMethod("FinalCallsite");
 
@@ -280,10 +280,10 @@ namespace VolumetricShading
     internal class SunMoonPatches
     {
         private static readonly MethodInfo StandardShaderTextureSetter = typeof(ShaderProgramStandard)
-            .GetProperty("Tex2D")?.SetMethod;
+            .GetProperty("Tex2D")?.GetSetMethod();
 
         private static readonly MethodInfo AddRenderFlagsSetter = typeof(ShaderProgramStandard)
-            .GetProperty("AddRenderFlags")?.SetMethod;
+            .GetProperty("AddRenderFlags")?.GetSetMethod();
 
         private static readonly MethodInfo RenderCallsiteMethod = typeof(SunMoonPatches)
             .GetMethod("RenderCallsite");

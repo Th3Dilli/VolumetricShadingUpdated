@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "Client": {
+      "commandName": "Executable",
+      "executablePath": "$(VINTAGE_STORY_MODDING_NET7)/Vintagestory",
+      "commandLineArgs": "--tracelog --addModPath $(TargetDir) --addOrigin $(SolutionDir)resources/assets",
+      "workingDirectory": "$(VINTAGE_STORY_MODDING_NET7)"
+    },
+    "Server": {
+      "commandName": "Executable",
+      "executablePath": "$(VINTAGE_STORY_MODDING_NET7)/VintagestoryServer",
+      "commandLineArgs": "--tracelog --addModPath $(TargetDir) --addOrigin $(ProjectDir)resources/assets",
+      "workingDirectory": "$(VINTAGE_STORY_MODDING_NET7)"
+    }
+  }
+}

@@ -73,7 +73,7 @@
     #endif
     #if SSAOLEVEL > 0
     outGPosition
-    
+
 - type: token
   filename: chunkopaque.fsh
   tokens: vec4(camPos.xyz, fogAmount * 2 + glowLevel);
