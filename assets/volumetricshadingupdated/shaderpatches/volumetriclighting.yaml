@@ -134,10 +134,16 @@
 
 - type: token
   filename: chunktransparent.fsh
-  tokens: outGlow = vec4(glowLevel, 0, 0, color.a);
+  tokens: outReveal.r = color.a;
   content: |
+    outReveal.r = color.a;
     float scatterAmt = calculateVolumetricScatter(worldPos.xyz);
-    outGlow = vec4(glowLevel, scatterAmt, 0, color.a);
+
+- type: token
+  filename: chunktransparent.fsh
+  tokens: 0, 0, color.a);
+  content: |
+    scatterAmt, 0, color.a);
 
 - type: start
   filename: chunktransparent.vsh
@@ -291,7 +297,7 @@
   content: |
     in vec4 worldPos;
     uniform float fogDensityIn;
-    
+
 - type: start
   filename: instanced.vsh
   content: out vec4 worldPos;
